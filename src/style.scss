@@ -6,6 +6,12 @@ $ltgrn: #DFE6A4;
 $white: #F2F3F0;
 $lblue: #B9CBD7;
 
+@mixin center{
+    display:flex;
+    flex-flow:column;
+    align-items:center;
+}
+
 body{
     font-size:16px;
     font-family:"Noto Sans";
@@ -36,23 +42,23 @@ button{
 }
 
 .content{
-    padding:1rem 2rem; 
-    text-align:center;
+    @include center;
+    padding:1rem 2rem;
 
     position:relative;
     z-index:50;
-    
+
     img{
         width:100%;
     }
-    
+
     &__title{
         font-size:2rem;
         font-family:"Fjalla One";
         text-transform:uppercase;
     }
 
-   &__text, &__img, button{
+    &__text, &__img, button{
         margin-top:1rem;
     }
 
@@ -60,7 +66,7 @@ button{
         text-align:left;
         line-height:1.25rem;
     }
-    
+
     &__img{
         width:100%;
     }
@@ -92,10 +98,10 @@ button{
 .slider{
     padding:2rem 0;
     overflow:hidden;
-    
+
     position:relative;
     z-index:50;
-    
+
     &--bottom{
         padding-bottom:3rem;
 
@@ -113,10 +119,10 @@ button{
 
                     font-size:1rem;
                 }
-            } 
+            }
         }
     }
-    
+
     &--dark{
         & .slider__ctrls{
             color:$dkgrn;
@@ -132,7 +138,7 @@ button{
         justify-content:space-between;
         align-items:center;
         z-index:100;
-        
+
         position:absolute;
         transform:translate(0, -50%);
         top:50%;
@@ -143,7 +149,7 @@ button{
         }
     }
 
-    &__slides{ 
+    &__slides{
         position:relative;
         display:flex;
 
@@ -154,7 +160,7 @@ button{
         width:100vw;
         flex:0 0 100vw;
         text-align:center;
-        
+
         &__dpic{
             width:calc(100% - 1rem);
         }
@@ -182,12 +188,12 @@ button{
     .header{
         padding:1rem;
         text-align:center;
-        
+
         background-image:url("assets/cover_hero_grn.jpg");
         background-size:cover;
         background-position:center center;
 
-        &__links{ 
+        &__links{
             &__link{
                 margin:0 .5rem;
 
@@ -202,7 +208,7 @@ button{
             margin-top:1rem;
             width:4rem;
         }
-    } 
+    }
 }
 
 #team, #events{
@@ -221,227 +227,227 @@ button{
             padding:1rem;
             font-size:1.5rem;
         }
-    } 
+    }
 }
 
 @media all and (min-width:30rem){
 
-.mobile{
-    display:none;
-}
-
-.wrapper{
-    padding:2rem calc((100% - 50rem) / 2);
-}
-
-.content{
-    &__text, &__img{
-        max-width:30rem;
-    }
-}
-
-.slider{
-    max-width:50rem;
-
-    &__ctrls{
+    .mobile{
         display:none;
     }
 
-    &__slides{
-        flex-flow:row wrap;
-        justify-content:center;
-    }
-    
-    &__slide{
-        width:10rem;
-        flex:0 0 10rem;
-
-        margin:1rem;
-
-        &__pic{
-            width:100%;
-            margin:1rem 0;
-        }
-    }
-}
-
-#cover{
-    background-image:url("assets/cover_hero_grn.jpg");
-    background-position:center bottom;
-    background-size:cover;
-    
-    .bg{
-        display:block;
-        position:absolute;
-        z-index:10;
-        left:0;
-
-        width:100%;
-        height:100%;
-        background:linear-gradient(rgba($dkgrn,0.4), rgba($dkgrn,0.7) 30%, rgba($dkgrn,0.7) 70%, rgba($dkgrn,0.4) 100%);
-    }
-    
-    .header, .content{
-        position:relative;
-        z-index:50;
-    }
-
-    .header{
-        background-image:none;
-        background-size:cover;
-
-        &__links{
-            margin-top:2rem;
-
-            &__link{
-                font-size:2rem;
-            }
-        }
-
-        &__logo{
-            margin-top:2rem;
-            width:8rem;
-        }
+    .wrapper{
+        padding:2rem calc((100% - 50rem) / 2);
     }
 
     .content{
-        &__img{
-            display:none;
-        }
-
-        &__text{
-            color:$white;
+        &__text, &__img{
             max-width:30rem;
-            font-size:1.25rem;
-        }
-
-        button{
-            font-size:1.5rem;
-            font-family:"Fjalla One";
-            padding:.5rem 2rem;
-        }
-    }
-}
-
-#advisors{
-    .content{
-        &__text{
-            display:none;
         }
     }
 
     .slider{
-        .dktop{
-            display:block;
+        max-width:50rem;
+
+        &__ctrls{
+            display:none;
+        }
+
+        &__slides{
+            flex-flow:row wrap;
+            justify-content:center;
         }
 
         &__slide{
-            width:100%;
-            flex:0 0 100%;
-            display:flex;
-            align-items:center;
-            
-            &__pic, &__info{ 
-                margin:0 1rem;
-            }
+            width:10rem;
+            flex:0 0 10rem;
+
+            margin:1rem;
 
             &__pic{
-                max-width:none;
+                width:100%;
+                margin:1rem 0;
+            }
+        }
+    }
 
-                width:12rem;
-                height:12rem;
-                flex:0 0;
+    #cover{
+        background-image:url("assets/cover_hero_grn.jpg");
+        background-position:center bottom;
+        background-size:cover;
+
+        .bg{
+            display:block;
+            position:absolute;
+            z-index:10;
+            left:0;
+
+            width:100%;
+            height:100%;
+            background:linear-gradient(rgba($dkgrn,0.4), rgba($dkgrn,0.7) 30%, rgba($dkgrn,0.7) 70%, rgba($dkgrn,0.4) 100%);
+        }
+
+        .header, .content{
+            position:relative;
+            z-index:50;
+        }
+
+        .header{
+            background-image:none;
+            background-size:cover;
+
+            &__links{
+                margin-top:2rem;
+
+                &__link{
+                    font-size:2rem;
+                }
             }
 
-            &__info{
-                text-align:left;
+            &__logo{
+                margin-top:2rem;
+                width:8rem;
             }
-            
+        }
+
+        .content{
+            &__img{
+                display:none;
+            }
+
             &__text{
-                font-style:italic;
+                color:$white;
+                max-width:30rem;
+                font-size:1.25rem;
             }
 
-            &__desc{
-                font-size:1rem;
-                margin-top:.5rem;
+            button{
+                font-size:1.5rem;
+                font-family:"Fjalla One";
+                padding:.5rem 2rem;
+            }
+        }
+    }
+
+    #advisors{
+        .content{
+            &__text{
+                display:none;
+            }
+        }
+
+        .slider{ .dktop{
+                display:block;
             }
 
-            &:nth-child(even){
-                .slider__slide__pic{
-                    order:2;
+            &__slide{
+                width:100%;
+                flex:0 0 100%;
+                display:flex;
+                align-items:center;
+
+                &__pic, &__info{
+                    margin:0 1rem;
+                }
+
+                &__pic{
+                    max-width:none;
+
+                    width:12rem;
+                    height:12rem;
+                    flex:0 0;
+                }
+
+                &__info{
+                    text-align:left;
+                }
+
+                &__text{
+                    font-style:italic;
+                }
+
+                &__desc{
+                    font-size:1rem;
+                    margin-top:.5rem;
+                }
+
+                &:nth-child(even){
+                    .slider__slide__pic{
+                        order:2;
+                    }
                 }
             }
         }
     }
-}
 
-#events{
-    .slider{
-        &__slide{
-            width:calc(33% - 3rem);
-            flex:0 auto;
+    #events{
+        .slider{
+            &__slide{
+                width:calc(33% - 3rem);
+                flex:0 auto;
 
-            &__dpic{
-                width:100%;
+                &__dpic{
+                    width:100%;
+                }
             }
         }
     }
-}
 
-#contact{
-    background-image:url("assets/cover_footer_blue.jpg");
-    background-size:cover;
+    #contact{
+        background-image:url("assets/cover_footer_blue.jpg");
+        background-size:cover;
 
-    .bg{
-        display:block;
-        position:absolute;
-        z-index:10;
-    
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
+        .bg{
+            display:block;
+            position:absolute;
+            z-index:10;
 
-        background:linear-gradient(rgba($lblue, 0.4),rgba($lblue, 0.8) 20%,rgba($lblue, 0.8) 80%,rgba($lblue, 0.4));
-    }
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
 
-    .content{
-        display:flex;
-        justify-content:flex-end;
-        align-items:stretch;
-
-        .right{
-            margin:0 1rem;
+            background:linear-gradient(rgba($lblue, 0.4),rgba($lblue, 0.8) 20%,rgba($lblue, 0.8) 80%,rgba($lblue, 0.4));
         }
-        
-        .left{
+
+        .content{
             display:flex;
-            flex-flow:column;
-            align-items:flex-end;
+            flex-flow:row;
+            justify-content:flex-end;
+            align-items:stretch;
 
-            .media{
-                order:10;
+            .right{
+                margin:0 1rem;
             }
-            
-            .first{
-                margin:0;
+
+            .left{
+                display:flex;
+                flex-flow:column;
+                align-items:flex-end;
+
+                .media{
+                    order:10;
+                }
+
+                .first{
+                    margin:0;
+                }
+            }
+
+            &__info{
+                &--header{
+                    font-size:1.5rem;
+                }
+
+                &--text{
+                    font-size:1rem;
+                }
+
+                &--map{
+                    height:100%;
+                }
             }
         }
-        
-        &__info{
-            &--header{
-                font-size:1.5rem;
-            }
-
-            &--text{
-                font-size:1rem;
-            }
-
-            &--map{
-                height:100%;
-            }
-        }
-    } 
-}
+    }
 
 }
