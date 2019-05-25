@@ -38,7 +38,7 @@ var site = new Vue({
         },{
             role:"Marketing Director",
             name:"Jerry",
-            pic:"assets/ppl/grp.jpg"
+            pic:"assets/ppl/jerry.jpg"
         },{
             role:"Project Director",
             name:"KiaAn",
