@@ -5,36 +5,60 @@ var site = new Vue({
     data:{
         team:[{
             role:"President",
-            name:"ZhengAn",
-            pic:"assets/ppl_6.jpg"
+            name:"YiWin",
+            pic:"assets/ppl/yiwin.jpg"
+        },{
+            role:"Finance Director",
+            name:"Alecs",
+            pic:"assets/ppl/alecs.jpg"
         },{
             role:"Secretary",
-            name:"Cluadia",
-            pic:"assets/ppl_4.jpg"
+            name:"HuiLing",
+            pic:"assets/ppl/huiling.jpg"
         },{
             role:"Deputy Secretary",
-            name:"XinMin",
-            pic:"assets/ppl_5.jpg"
-        },{
-            role:"Resource Director",
-            name:"HuQuee",
-            pic:"assets/ppl_2.jpg"
-        },{
-            role:"Marketing Director",
-            name:"Alecs",
-            pic:"assets/ppl_1.jpg"
-        },{
-            role:"Communication Director",
-            name:"HuiYee",
-            pic:"assets/ppl_7.jpg"
-        },{
-            role:"Projects Director",
-            name:"HuiLing",
-            pic:"assets/ppl_8.jpg"
+            name:"Claudia",
+            pic:"assets/ppl/claudia.jpg"
         },{
             role:"Dharma Director",
+            name:"YungChao",
+            pic:"assets/ppl/yungchow.jpg"
+        },{
+            role:"Deputy Dharma Director",
             name:"ShuPeng",
-            pic:"assets/ppl_3.jpg"
+            pic:"assets/ppl/shupeng.jpg"
+        },{
+            role:"Welfare Director",
+            name:"Juliet",
+            pic:"assets/ppl/juliet.jpg"
+        },{
+            role:"Resource Director",
+            name:"XinMin",
+            pic:"assets/ppl/xinmin.jpg"
+        },{
+            role:"Marketing Director",
+            name:"Jerry",
+            pic:"assets/ppl/grp.jpg"
+        },{
+            role:"Project Director",
+            name:"KiaAn",
+            pic:"assets/ppl/kiaan.jpg"
+        },{
+            role:"Publication Director",
+            name:"Marvella",
+            pic:"assets/ppl/marvella.jpg"
+        },{
+            role:"Communication Director",
+            name:"ZhengAn",
+            pic:"assets/ppl/zhengan.jpg"
+        },{
+            role:"SubComm",
+            name:"OnChit",
+            pic:"assets/ppl/onchit.jpg"
+        },{
+            role:"SubComm",
+            name:"DiXian",
+            pic:"assets/ppl/dixian.jpg"
         }],
         team_id:0,
 
